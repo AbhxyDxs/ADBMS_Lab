@@ -1,0 +1,62 @@
+-- create database insurance;
+-- use insurance;
+-- create table person(
+-- 	driver_id INT, 
+--     name VARCHAR(50), 
+--     address VARCHAR(50), 
+--     PRIMARY KEY(driver_id)
+--     );
+--     
+-- create table car(
+-- 	license VARCHAR(20),
+--     model VARCHAR(50),
+--     year INT,
+--     PRIMARY KEY(license)
+--     );
+--     
+-- create table accident(
+-- 	report_no int,
+--     date date,
+--     location varchar(50),
+-- 	PRIMARY KEY(report_no)
+--     );
+--     
+-- create table owns(
+-- 	driver_id INT,
+-- 	license VARCHAR(20));
+
+-- alter table owns add constraint primary key(driver_id,license); 
+--  
+-- 	alter table owns add constraint foreign key(driver_id) references person(driver_id);
+--     alter table owns add constraint foreign key(license) references car(license);
+-- 
+-- create table participated(
+-- 	report_no int,
+--     license varchar(20),
+--     driver_id int,
+--     damage_amount int
+--     );
+
+-- alter table participated add constraint primary key(report_no,license); 
+
+-- alter table participated add constraint foreign key(report_no) references accident(report_no);
+-- alter table participated add constraint foreign key(license) references car(license);
+-- 
+-- rename table car to vehicle;
+-- alter table accident change report_no report_number INT;
+-- alter table person add column gender varchar(10);
+-- alter table accident drop column location;
+-- alter table participated change damage_amount damage_amount numeric(12,2);
+-- 
+-- INSERT INTO person(driver_id,name,address) VALUES(1090,'rifana','ambalakkunn'),(1089,'sherin','koodathai'),(1234,'rijfas','thamarassery'),(1088,'aflah','frkClg'),(1087,'flaah','petta');;
+-- insert into vehicle(license,model,year) values('l126','st67',2015),('l127','fg34',2020),('l123','a098',2019),('l124','b678',2017),('l125','c098',2015);
+-- insert into accident values(852,'2001-07-18'),(741,'3001-03-30'),(234,'2001-07-17'),(456,'3001-03-31'),(789,'4001-04-14');
+-- insert into owns values(1088,'l124'),(1087,'l127'),(1090,'l123'),(1089,'l125'),(1234,'l124');
+-- insert into participated values(852,'l126',1088,4444.00),(741,'l127',1087,5555.00),(234,'l123',1090,1111.00),(456,'l124',1089,2222.00),(789,'l125',1234,3333.00);
+-- SELECT * from vehicle;
+-- SELECT * from person;
+-- SELECT * from accident;
+-- SELECT * from owns;
+-- update person set gender='male' where driver_id in (1088,1087);
+-- 
+
